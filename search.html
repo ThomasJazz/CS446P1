@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Search</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+	
+	<style media="screen and (min-width:990px)">
+		#searchbox { width: 80%; }
+	</style>
+	  
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="mypage.html">FeedMe</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+			
+          <form id="searchbox" class="navbar-form" action="search.html">
+            <div class="form-group" style="display:inline">
+              <div class="input-group">
+                <input class="form-control" type="search" placeholder="Name of dish or ingredient(s)" aria-label="Search">
+                <button class="btn btn-primary" type="submit">Search</button>
+              </div>
+            </div>
+          </form>
+			
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Smith
+			      <span class="sr-only">(current)</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="mypage.html">My FeedMe</a>
+                <a class="dropdown-item" href="#">Pantry</a>
+                <a class="dropdown-item" href="#">Favorites</a>
+                <a class="dropdown-item" href="#">Grocery</a>
+                <a class="dropdown-item" href="#">Rated</a>
+                <a class="dropdown-item" href="#">Budget</a>
+                <a class="dropdown-item" href="#">Profile</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="index.html">Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	  
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12">
+		  <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="mypage.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Search</li>
+            </ol>
+          </nav>
+		</div>
+      </div>
+		
+      <div class="row">
+		  
+        <div class="col-lg-3">
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Ingredients
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck1">
+          <label class="custom-control-label" for="ingredientsCustomCheck1">Beef (673)</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck2">
+          <label class="custom-control-label" for="ingredientsCustomCheck2">Chicken (324)</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck3">
+          <label class="custom-control-label" for="ingredientsCustomCheck3">Polk (231)</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck4">
+          <label class="custom-control-label" for="ingredientsCustomCheck4">Fish (156)</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck5">
+          <label class="custom-control-label" for="ingredientsCustomCheck5">Potate (112)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck6">
+          <label class="custom-control-label" for="ingredientsCustomCheck6">Beans (110)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck7">
+          <label class="custom-control-label" for="ingredientsCustomCheck7">Cheese (110)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck8">
+          <label class="custom-control-label" for="ingredientsCustomCheck8">Dairy (108)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck9">
+          <label class="custom-control-label" for="ingredientsCustomCheck9">Eggs (106)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck10">
+          <label class="custom-control-label" for="ingredientsCustomCheck10">Lamb (102)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck11">
+          <label class="custom-control-label" for="ingredientsCustomCheck11">Fruits (100)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck12">
+          <label class="custom-control-label" for="ingredientsCustomCheck12">Nuts (95)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck13">
+          <label class="custom-control-label" for="ingredientsCustomCheck13">Pasta (88)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck14">
+          <label class="custom-control-label" for="ingredientsCustomCheck14">Rice / Grains (77)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck15">
+          <label class="custom-control-label" for="ingredientsCustomCheck15">Sausage (75)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="ingredientsCustomCheck16">
+          <label class="custom-control-label" for="ingredientsCustomCheck16">Carrot (112)</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Types
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="typesCustomCheck1">
+          <label class="custom-control-label" for="typesCustomCheck1">Main Dishes (673)</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="typesCustomCheck2">
+          <label class="custom-control-label" for="typesCustomCheck2">Stews (324)</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="typesCustomCheck3">
+          <label class="custom-control-label" for="typesCustomCheck3">Soups (250)</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="typesCustomCheck4">
+          <label class="custom-control-label" for="typesCustomCheck4">Appetizers (235)</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="typesCustomCheck5">
+          <label class="custom-control-label" for="typesCustomCheck5">Breakfast (232)</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="typesCustomCheck6">
+          <label class="custom-control-label" for="typesCustomCheck6">Breakfast / Brunch (232)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="typesCustomCheck7">
+          <label class="custom-control-label" for="typesCustomCheck7">Salads (222)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="typesCustomCheck8">
+          <label class="custom-control-label" for="typesCustomCheck8">Side Dishes (215)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="typesCustomCheck9">
+          <label class="custom-control-label" for="typesCustomCheck9">Desserts (208)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="typesCustomCheck10">
+          <label class="custom-control-label" for="typesCustomCheck10">Cookies (185)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="typesCustomCheck11">
+          <label class="custom-control-label" for="typesCustomCheck11">Breads (175)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="typesCustomCheck12">
+          <label class="custom-control-label" for="typesCustomCheck12">Cakes / Pies (142)</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="typesCustomCheck13">
+          <label class="custom-control-label" for="typesCustomCheck13">Pizza / Pasta (122)</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Cook Time (mins)
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="cookTimeCustomCheck1">
+          <label class="custom-control-label" for="cookTimeCustomCheck1">&lt;15 (xxx)</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="cookTimeCustomCheck2">
+          <label class="custom-control-label" for="cookTimeCustomCheck2">15 to 30 (xxx)</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="cookTimeCustomCheck3">
+          <label class="custom-control-label" for="cookTimeCustomCheck3">30 to 40 (xxx)</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="cookTimeCustomCheck4">
+          <label class="custom-control-label" for="cookTimeCustomCheck4">40 to 50 (xxx)</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="cookTimeCustomCheck5">
+          <label class="custom-control-label" for="cookTimeCustomCheck5">&gt;60 (xxx)</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Cost ($)
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+        <form>
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control form-control-sm" placeholder="Min">
+            </div>
+			  <div>&nbsp;to&nbsp;</div>
+            <div class="col">
+              <input type="text" class="form-control form-control-sm" placeholder="Max">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingFive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Calories
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+      <div class="card-body">
+        <form>
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control form-control-sm" placeholder="Min">
+            </div>
+			  <div>&nbsp;to&nbsp;</div>
+            <div class="col">
+              <input type="text" class="form-control form-control-sm" placeholder="Max">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingSix">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Cuisine
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+      <div class="card-body">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="cuisineCustomCheck1">
+          <label class="custom-control-label" for="cuisineCustomCheck1">American</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="cuisineCustomCheck2">
+          <label class="custom-control-label" for="cuisineCustomCheck2">Japanese</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="cuisineCustomCheck3">
+          <label class="custom-control-label" for="cuisineCustomCheck3">Mexican</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="cuisineCustomCheck4">
+          <label class="custom-control-label" for="cuisineCustomCheck4">French</label>
+        </div>
+		<div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="cuisineCustomCheck5">
+          <label class="custom-control-label" for="cuisineCustomCheck5">Chinese</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="cuisineCustomCheck5">
+          <label class="custom-control-label" for="cuisineCustomCheck5">Italian</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="cuisineCustomCheck5">
+          <label class="custom-control-label" for="cuisineCustomCheck5">Vietnamese</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="cuisineCustomCheck5">
+          <label class="custom-control-label" for="cuisineCustomCheck5">Thai</label>
+        </div>
+		  <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="cuisineCustomCheck5">
+          <label class="custom-control-label" for="cuisineCustomCheck5">Korean</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+			<div class="row mb-sm-2">
+				<div class="col">
+				
+					<!-- Button trigger modal -->
+					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+					  Launch Pantry Manager
+					</button>
+
+					<!-- Modal -->
+					<div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">Pantry Manager</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <span aria-hidden="true">&times;</span>
+							</button>
+						  </div>
+						  <div class="modal-body">
+							  <div class="container-fluid">
+								  <div class="row">
+								  	<div class="col-6">
+										<form>
+										  <div class="form-group">
+											<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingredient name">
+										  </div>
+										</form>
+									</div>
+									  <div class="col-1"></div>
+									<div class="col-5"></div>
+								  </div>
+								<div class="row">
+								  	<div class="col-6">
+										<form>
+										  <div class="form-group">
+											<select multiple class="form-control" id="exampleFormControlSelect2" size="15">
+											  	<option>Fish</option>
+											  	<option>Potate</option>
+											  	<option>Beans</option>
+											  	<option>Cheese</option>
+												<option>Dairy</option>
+												<option>Eggs</option>
+												<option>Lamb</option>
+												<option>Fruits</option>
+												<option>Nuts</option>
+												<option>Pasta</option>
+												<option>Rice / Grains</option>
+												<option>Sausage</option>
+												<option>Carrot</option>
+											</select>
+										  </div>
+										</form>
+									</div>
+									<div class="col-1"><p><button type="button" class="btn btn-primary btn-sm">&gt;&gt;</button></p>
+										<p><button type="button" class="btn btn-primary btn-sm">&lt;&lt;</button></p></div>
+								  	<div class="col-5">
+										<form>
+										  <div class="form-group">
+											<select multiple class="form-control" id="exampleFormControlSelect2" size="15">
+											  	<option>Beef</option>
+											  	<option>Chicken</option>
+											  	<option>Polk</option>
+											</select>
+										  </div>
+										</form>
+									</div>
+								</div>
+							  </div>
+							</div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				
+				</div>
+				<div class="col">
+					<form class="form-inline float-right">
+						<div class="form-group">
+							<label for="sortBy">Sort by:&nbsp;</label>
+							<select class="form-control form-control-sm ">
+								<option>Cooking Time: Short to Long</option>
+								<option>Cost: Cheap to Expensive</option>
+								<option>Calories: Low to High</option>
+								<option>Popularity</option>
+								<option selected>User Ratings</option>
+							</select>
+						</div>
+					</form>					
+				</div>
+			</div>
+			
+          <div class="row">
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="dishes/Dish2Search.html"><img class="card-img-top" src="images/dish_00002.jpg" alt="Mexican Chicken Kiev"></a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="dishes/Dish2Search.html">XBurger One X 360</a>
+                  </h5>
+				  <h6>$3.12 | 570 kcal | 30 mins</h6>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="dishes/Dish3Search.html"><img class="card-img-top" src="images/dish_00003.jpg" alt="Mexican Chicken Kiev"></a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="dishes/Dish3Search.html">Old-Fashioned Beef Stew</a>
+                  </h5>
+				  <h6>$4.17 | 750 kcal | 90 mins</h6>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="dishes/Dish4Search.html"><img class="card-img-top" src="images/dish_00004.jpg" alt="Mexican Chicken Kiev"></a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="dishes/Dish4Search.html">Roast beef and Yorkshire puddings</a>
+                  </h5>
+				  <h6>$7.78 | 867 kcal | 60 mins</h6>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="images/dish_00009.jpg" alt="Mexican Chicken Kiev"></a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#">Fruit Bowl</a>
+                  </h5>
+				  <h6>$X.XX | XXX kcal | XX mins</h6>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="images/dish_00012.jpg" alt="Mexican Chicken Kiev"></a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#">Fish n Fries</a>
+                  </h5>
+				  <h6>$X.XX | XXX kcal | XX mins</h6>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="images/dish_00005.jpg" alt="Mexican Chicken Kiev"></a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#">Sunny Breakfast Delight</a>
+                  </h5>
+				  <h6>$X.XX | XXX kcal | XX mins</h6>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.row -->
+
+          <div class="row">
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="images/dish_00007.jpg" alt="Mexican Chicken Kiev"></a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#">Tofu Soup</a>
+                  </h5>
+				  <h6>$X.XX | XXX kcal | XX mins</h6>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="images/dish_00011.jpg" alt="Mexican Chicken Kiev"></a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#">Grilled Cheese Sandwich</a>
+                  </h5>
+				  <h6>$X.XX | XXX kcal | XX mins</h6>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="images/dish_00008.jpg" alt="Mexican Chicken Kiev"></a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#">Fresh Tacos</a>
+                  </h5>
+				  <h6>$X.XX | XXX kcal | XX mins</h6>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="images/dish_00006.jpg" alt="Mexican Chicken Kiev"></a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#">Veggie Burrito</a>
+                  </h5>
+                  <h6>$X.XX | XXX kcal | XX mins</h6>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="images/dish_00010.jpg" alt="Mexican Chicken Kiev"></a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#">Bacon Sandwich</a>
+                  </h5>
+				  <h6>$X.XX | XXX kcal | XX mins</h6>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="images/dish_00013.jpg" alt="Mexican Chicken Kiev"></a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#">Vegetarian Meal</a>
+                  </h5>
+				  <h6>$X.XX | XXX kcal | XX mins</h6>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.row -->
+			
+			<nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+			
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Our Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
