@@ -161,5 +161,10 @@ body {
 .col-md-5 {
     text-align: center;
 }
-
 /* END OF CSS FOR DISH PAGES */
+
+/* CSS FOR PANTRY MANAGER */
+#user-pantry {
+    vertical-align: bottom;
+}
+/* END OF CSS FOR PANTRY MANAGER */

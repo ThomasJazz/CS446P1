@@ -366,7 +366,7 @@
 				<div class="col">
 				
 					<!-- Button trigger modal -->
-					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+					<button id="modal-btn" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
 					  Launch Pantry Manager
 					</button>
 
@@ -391,39 +391,27 @@
 										</form>
 									</div>
 									  <div class="col-1"></div>
-									<div class="col-5"></div>
+									<div class="col-5">
+                                        <h5 id="user-pantry">Your pantry</h5>
+                                    </div>
 								  </div>
 								<div class="row">
 								  	<div class="col-6">
 										<form>
 										  <div class="form-group">
-											<select multiple class="form-control" id="exampleFormControlSelect2" size="15">
-											  	<option>Fish</option>
-											  	<option>Potate</option>
-											  	<option>Beans</option>
-											  	<option>Cheese</option>
-												<option>Dairy</option>
-												<option>Eggs</option>
-												<option>Lamb</option>
-												<option>Fruits</option>
-												<option>Nuts</option>
-												<option>Pasta</option>
-												<option>Rice / Grains</option>
-												<option>Sausage</option>
-												<option>Carrot</option>
+											<select multiple class="form-control" id="left-group" size="15">
+                                                <!-- Options loaded in by pantryManager.js-->
 											</select>
 										  </div>
 										</form>
 									</div>
-									<div class="col-1"><p><button type="button" class="btn btn-primary btn-sm">&gt;&gt;</button></p>
-										<p><button type="button" class="btn btn-primary btn-sm">&lt;&lt;</button></p></div>
+									<div class="col-1">
+                                        <p><button type="button" onclick="addIngredient()" class="btn btn-primary btn-sm">&gt;&gt;</button></p>
+										<p><button type="button" onclick="removeIngredient()" class="btn btn-primary btn-sm">&lt;&lt;</button></p></div>
 								  	<div class="col-5">
 										<form>
 										  <div class="form-group">
-											<select multiple class="form-control" id="exampleFormControlSelect2" size="15">
-											  	<option>Beef</option>
-											  	<option>Chicken</option>
-											  	<option>Polk</option>
+											<select multiple class="form-control" id="right-group" size="15">
 											</select>
 										  </div>
 										</form>
@@ -437,7 +425,7 @@
 						</div>
 					  </div>
 					</div>
-				
+
 				</div>
 				<div class="col">
 					<form class="form-inline float-right">
@@ -679,6 +667,9 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Pantry management script -->
+  <script src="js/pantryManager.js"></script>
 
   </body>
 
