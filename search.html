@@ -385,73 +385,61 @@
 					  Launch Pantry Manager
 					</button>
 
-					<!-- Modal -->
-					<div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-						<div class="modal-content">
-						  <div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLongTitle">Pantry Manager</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-						  </div>
-						  <div class="modal-body">
-							  <div class="container-fluid">
-								  <div class="row">
-								  	<div class="col-6">
-										<form>
-										  <div class="form-group">
-											<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingredient name">
-										  </div>
-										</form>
-									</div>
-									  <div class="col-1"></div>
-									<div class="col-5"></div>
-								  </div>
-								<div class="row">
-								  	<div class="col-6">
-										<form>
-										  <div class="form-group">
-											<select multiple class="form-control" id="exampleFormControlSelect2" size="15">
-											  	<option>Fish</option>
-											  	<option>Potate</option>
-											  	<option>Beans</option>
-											  	<option>Cheese</option>
-												<option>Dairy</option>
-												<option>Eggs</option>
-												<option>Lamb</option>
-												<option>Fruits</option>
-												<option>Nuts</option>
-												<option>Pasta</option>
-												<option>Rice / Grains</option>
-												<option>Sausage</option>
-												<option>Carrot</option>
-											</select>
-										  </div>
-										</form>
-									</div>
-									<div class="col-1"><p><button type="button" class="btn btn-primary btn-sm">&gt;&gt;</button></p>
-										<p><button type="button" class="btn btn-primary btn-sm">&lt;&lt;</button></p></div>
-								  	<div class="col-5">
-										<form>
-										  <div class="form-group">
-											<select multiple class="form-control" id="exampleFormControlSelect2" size="15">
-											  	<option>Beef</option>
-											  	<option>Chicken</option>
-											  	<option>Polk</option>
-											</select>
-										  </div>
-										</form>
-									</div>
-								</div>
-							  </div>
-							</div>
-						  <div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						  </div>
-						</div>
-					  </div>
-					</div>
+                    <!-- Modal -->
+                    <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Pantry Manager</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingredient name">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-1"></div>
+                                            <div class="col-5">
+                                                <h5 id="user-pantry">Your Pantry</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <select multiple class="form-control" id="left-group" size="15">
+                                                            <!-- Options loaded in by pantryManager.js-->
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-1">
+                                                <p><button type="button" onclick="addIngredient()" class="btn btn-primary btn-sm">&gt;&gt;</button></p>
+                                                <p><button type="button" onclick="removeIngredient()" class="btn btn-primary btn-sm">&lt;&lt;</button></p></div>
+                                            <div class="col-5">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <select multiple class="form-control" id="right-group" size="15">
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 				</div>
 				
 			</div>
@@ -589,6 +577,9 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Pantry management script -->
+    <script src="js/pantryManager.js"></script>
 
   </body>
 
