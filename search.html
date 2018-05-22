@@ -456,100 +456,6 @@
 				
 			</div>
 			
-
-<!-- Added by Nobu May 20, 2018 : START -->
-<span></span>			  
-<script language="javascript">
-
-	var name = 'localdb'
-	var version = '1.0'
-	var description = 'Web SQL Database'
-	var size = 10 * 1024 * 1024
-	var db = openDatabase(name, version, description, size)
-
-	// Create table
-	db.transaction(function(tx){
-		tx.executeSql(`drop table meals`)
-		tx.executeSql(`
-			create table if not exists meals (
-				href varchar primary key,
-				imgsrc varchar,
-				name varchar,
-				cost float,
-				calorie int,
-				time int,
-				stars varchar,
-				popularity float,
-				rating float
-			)
-		`)
-	})
-	db.transaction(function (tx){
-		tx.executeSql('insert into meals (href, imgsrc, name, cost, calorie, time, stars, popularity, rating) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', ['dishes/Dish2Search.html', 'images/dish_00002.jpg', 'XBurger One X 360', 3.12, 570, 30, '&#9733; &#9733; &#9733; &#9733; &#9733;', 43.0, 5.0])
-		tx.executeSql('insert into meals (href, imgsrc, name, cost, calorie, time, stars, popularity, rating) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', ['dishes/Dish3Search.html', 'images/dish_00003.jpg', 'Old-Fashioned Beef Stew', 4.17, 750, 90, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0])
-		tx.executeSql('insert into meals (href, imgsrc, name, cost, calorie, time, stars, popularity, rating) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', ['dishes/Dish4Search.html', 'images/dish_00004.jpg', 'Roast beef and Yorkshire puddings', 7.78, 867, 60, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0])
-		tx.executeSql('insert into meals (href, imgsrc, name, cost, calorie, time, stars, popularity, rating) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', ['#4', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0])
-		tx.executeSql('insert into meals (href, imgsrc, name, cost, calorie, time, stars, popularity, rating) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', ['#5', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0])
-		tx.executeSql('insert into meals (href, imgsrc, name, cost, calorie, time, stars, popularity, rating) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', ['#6', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0])
-		tx.executeSql('insert into meals (href, imgsrc, name, cost, calorie, time, stars, popularity, rating) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', ['#7', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0])
-		tx.executeSql('insert into meals (href, imgsrc, name, cost, calorie, time, stars, popularity, rating) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', ['#8', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0])
-		tx.executeSql('insert into meals (href, imgsrc, name, cost, calorie, time, stars, popularity, rating) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', ['#9', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0])
-		tx.executeSql('insert into meals (href, imgsrc, name, cost, calorie, time, stars, popularity, rating) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', ['#10', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0])
-		tx.executeSql('insert into meals (href, imgsrc, name, cost, calorie, time, stars, popularity, rating) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', ['#11', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0])
-		tx.executeSql('insert into meals (href, imgsrc, name, cost, calorie, time, stars, popularity, rating) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', ['#12', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0])
-	})
-	
-	// search dishes and generate HTML code
-	function loadSearchResult(orderBy, ascOrDesc){
-		db.transaction(function (tx){
-			tx.executeSql('select * from meals order by ' + orderBy + ' ' + ascOrDesc, [],
-						  function (tx, results){
-				var html = ''
-				for (i = 0; i < results.rows.length; i++){
-					html += '<div class="col-lg-4 col-md-6 mb-4">'
-					html += '<div class="card h-100">'
-					html += '<a href="' + results.rows.item(i).href + '">'
-					html += '<img class="card-img-top" src="' + results.rows.item(i).imgsrc + '" alt="' + results.rows.item(i).name + '">'
-					html += '</a>'
-					html += '<div class="card-body">'
-					html += '<h5 class="card-title">'
-					html += '<a href="' + results.rows.item(i).href + '">' + results.rows.item(i).name + '</a>'
-					html += '</h5>'
-					html += '<h6>$' + results.rows.item(i).cost + ' | ' + results.rows.item(i).calorie + 'kcal | ' + results.rows.item(i).time + 'mins </h6>'
-					html += '</div>'
-					html += '<div class="card-footer">'
-					html += '<small class="text-muted">' + results.rows.item(i).stars + '</small>'
-					html += '</div>'
-					html += '</div>'
-					html += '</div>'
-				}
-				document.getElementById('search_result').innerHTML = html
-			})
-		})
-	}
-	
-	loadSearchResult('time', 'asc');
-	
-	function onChangeSortBox(){
-		var sortBox = document.getElementById("sortBox");
-    	var selectedValue = sortBox.options[sortBox.selectedIndex].value;
-		
-		if(selectedValue == 'time'){
-			loadSearchResult('time', 'asc');
-		} else if(selectedValue == 'cost') {
-			loadSearchResult('cost', 'asc');
-		} else if(selectedValue == 'calorie') {
-			loadSearchResult('calorie', 'asc');
-		} else if(selectedValue == 'popularity') {
-			loadSearchResult('popularity', 'desc');
-		} else if(selectedValue == 'rating') {
-			loadSearchResult('rating', 'desc');
-		}
-	}
-	
-</script>
-<span></span>
-<!-- Added by Nobu May 20, 2018 : END-->
 		
 		<!-- the place holder for the search result -->
 		<div class="row" id="search_result"></div>
@@ -589,6 +495,133 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Added by Nobu May 20, 2018 : START -->
+<span></span>			  
+<script language="javascript">
+
+	var arraySortedByTime = [
+		['#4', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
+		['#6', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
+		['#12', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
+		['#11', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
+		['#7', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0],
+		['dishes/Dish2Search.html', 'images/dish_00002.jpg', 'XBurger One X 360', 3.12, 570, 30, '&#9733; &#9733; &#9733; &#9733; &#9733;', 43.0, 5.0],
+		['#5', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
+		['#10', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
+		['#8', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0],
+		['#9', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0],
+		['dishes/Dish4Search.html', 'images/dish_00004.jpg', 'Roast beef and Yorkshire puddings', 7.78, 867, 60, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
+		['dishes/Dish3Search.html', 'images/dish_00003.jpg', 'Old-Fashioned Beef Stew', 4.17, 750, 90, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0]
+	]
+
+	var arraySortedByCost = [
+		['dishes/Dish2Search.html', 'images/dish_00002.jpg', 'XBurger One X 360', 3.12, 570, 30, '&#9733; &#9733; &#9733; &#9733; &#9733;', 43.0, 5.0],
+		['#6', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
+		['dishes/Dish3Search.html', 'images/dish_00003.jpg', 'Old-Fashioned Beef Stew', 4.17, 750, 90, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
+		['#4', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
+		['#7', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0],
+		['#12', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
+		['#10', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
+		['#5', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
+		['#8', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0],
+		['#11', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
+		['#9', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0],
+		['dishes/Dish4Search.html', 'images/dish_00004.jpg', 'Roast beef and Yorkshire puddings', 7.78, 867, 60, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0]
+	]
+
+	var arraySortedByCalorie = [
+		['dishes/Dish4Search.html', 'images/dish_00004.jpg', 'Roast beef and Yorkshire puddings', 7.78, 867, 60, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
+		['dishes/Dish3Search.html', 'images/dish_00003.jpg', 'Old-Fashioned Beef Stew', 4.17, 750, 90, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
+		['#9', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0],
+		['#5', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
+		['dishes/Dish2Search.html', 'images/dish_00002.jpg', 'XBurger One X 360', 3.12, 570, 30, '&#9733; &#9733; &#9733; &#9733; &#9733;', 43.0, 5.0],
+		['#8', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0],
+		['#11', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
+		['#10', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
+		['#4', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
+		['#6', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
+		['#12', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
+		['#7', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0]
+	]
+
+	var arraySortedByPopularity = [
+		['#4', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
+		['dishes/Dish3Search.html', 'images/dish_00003.jpg', 'Old-Fashioned Beef Stew', 4.17, 750, 90, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
+		['dishes/Dish4Search.html', 'images/dish_00004.jpg', 'Roast beef and Yorkshire puddings', 7.78, 867, 60, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
+		['#6', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
+		['#7', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0],
+		['#10', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
+		['#11', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
+		['dishes/Dish2Search.html', 'images/dish_00002.jpg', 'XBurger One X 360', 3.12, 570, 30, '&#9733; &#9733; &#9733; &#9733; &#9733;', 43.0, 5.0],
+		['#5', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
+		['#9', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0],
+		['#12', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
+		['#8', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0]
+	]
+
+	var arraySortedByRating = [
+		['dishes/Dish2Search.html', 'images/dish_00002.jpg', 'XBurger One X 360', 3.12, 570, 30, '&#9733; &#9733; &#9733; &#9733; &#9733;', 43.0, 5.0],
+		['dishes/Dish4Search.html', 'images/dish_00004.jpg', 'Roast beef and Yorkshire puddings', 7.78, 867, 60, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
+		['dishes/Dish3Search.html', 'images/dish_00003.jpg', 'Old-Fashioned Beef Stew', 4.17, 750, 90, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
+		['#6', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
+		['#4', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
+		['#7', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0],
+		['#10', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
+		['#5', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
+		['#11', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
+		['#12', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
+		['#8', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0],
+		['#9', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0]
+	]
+
+	// search dishes and generate HTML code
+	function loadSearchResult(arrayDishes){
+		var html = ''
+		for (i = 0; i < arrayDishes.length; i++){
+			html += '<div class="col-lg-4 col-md-6 mb-4">'
+			html += '<div class="card h-100">'
+			html += '<a href="' + arrayDishes[i][0] + '">'
+			html += '<img class="card-img-top" src="' + arrayDishes[i][1] + '" alt="' + arrayDishes[i][2] + '">'
+			html += '</a>'
+			html += '<div class="card-body">'
+			html += '<h5 class="card-title">'
+			html += '<a href="' + arrayDishes[i][0] + '">' + arrayDishes[i][2] + '</a>'
+			html += '</h5>'
+			html += '<h6>$' + arrayDishes[i][3] + ' | ' + arrayDishes[i][4] + 'kcal | ' + arrayDishes[i][5] + 'mins </h6>'
+			html += '</div>'
+			html += '<div class="card-footer">'
+			html += '<small class="text-muted">' + arrayDishes[i][6] + '</small>'
+			html += '</div>'
+			html += '</div>'
+			html += '</div>'
+		}
+		document.getElementById('search_result').innerHTML = html;
+	}
+	
+	loadSearchResult(arraySortedByTime);
+	
+	function onChangeSortBox(){
+		
+		var sortBox = document.getElementById("sortBox");
+		var selectedValue = sortBox.options[sortBox.selectedIndex].value;
+		
+		if(selectedValue == 'time'){
+			loadSearchResult(arraySortedByTime);
+		} else if(selectedValue == 'cost') {
+			loadSearchResult(arraySortedByCost);
+		} else if(selectedValue == 'calorie') {
+			loadSearchResult(arraySortedByCalorie);
+		} else if(selectedValue == 'popularity') {
+			loadSearchResult(arraySortedByPopularity);
+		} else if(selectedValue == 'rating') {
+			loadSearchResult(arraySortedByRating);
+		}
+	}
+	
+</script>
+<span></span>
+<!-- Added by Nobu May 20, 2018 : END-->
 
   </body>
 
