@@ -499,7 +499,7 @@
 		tx.executeSql('insert into meals (href, imgsrc, name, cost, calorie, time, stars, popularity, rating) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', ['#12', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0])
 	})
 	
-	// 全件検索
+	// search dishes and generate HTML code
 	function loadSearchResult(orderBy, ascOrDesc){
 		db.transaction(function (tx){
 			tx.executeSql('select * from meals order by ' + orderBy + ' ' + ascOrDesc, [],
