@@ -399,9 +399,9 @@
                                     <div class="container-fluid">
                                         <div class="row">
                                             <div class="col-6">
-                                                <form>
+                                                <form onsubmit="return false;">
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingredient name">
+                                                        <input type="text" class="form-control" id="pantrySearchInput" placeholder="Ingredient name">
                                                     </div>
                                                 </form>
                                             </div>
@@ -421,16 +421,20 @@
                                                 </form>
                                             </div>
                                             <div class="col-1">
-                                                <p><button type="button" onclick="addIngredient()" class="btn btn-primary btn-sm">&gt;&gt;</button></p>
-                                                <p><button type="button" onclick="removeIngredient()" class="btn btn-primary btn-sm">&lt;&lt;</button></p></div>
+                                                <p><button type="button" onclick="moveToRight()" class="btn btn-primary btn-sm">&gt;&gt;</button></p>
+                                                <p><button type="button" onclick="moveToLeft()" class="btn btn-primary btn-sm">&lt;&lt;</button></p></div>
                                             <div class="col-5">
                                                 <form>
                                                     <div class="form-group">
                                                         <select multiple class="form-control" id="right-group" size="15">
+                                                            <!-- Options loaded in by pantryManager.js-->
                                                         </select>
                                                     </div>
                                                 </form>
                                             </div>
+                                        </div>
+                                        <div class="row">
+                                            <output id="lastPerformed" name="Last performed"></output>
                                         </div>
                                     </div>
                                 </div>

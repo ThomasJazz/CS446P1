@@ -1,0 +1,8 @@
+{ "users": [
+  {"userName":"thomasjazz",
+    "searchItems": ["Salmon", "Potatoes", "Pinto beans", "Cheddar cheese", "Milk", "Eggs", "Lamb", "Apples", "Almonds"],
+    "pantryItems": ["Beef", "Chicken", "Pork", "Carrots", "Sausage"]
+  }
+]
+
+}
