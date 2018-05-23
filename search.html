@@ -15,11 +15,11 @@
 
     <!-- Custom styles for this template -->
     <link href="css/shop-homepage.css" rel="stylesheet">
-	
+
 	<style media="screen and (min-width:990px)">
 		#searchbox { width: 80%; }
 	</style>
-	  
+
   </head>
 
   <body>
@@ -32,7 +32,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-			
+
           <form id="searchbox" class="navbar-form" action="search.html">
             <div class="form-group" style="display:inline">
               <div class="input-group">
@@ -41,7 +41,7 @@
               </div>
             </div>
           </form>
-			
+
 			<ul class="navbar-nav ml-auto">
 			  <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Smith
@@ -63,7 +63,7 @@
         </div>
       </div>
     </nav>
-	  
+
     <!-- Page Content -->
     <div class="container">
 
@@ -77,9 +77,9 @@
           </nav>
 		</div>
       </div>
-		
+
       <div class="row">
-		  
+
         <div class="col-lg-3">
 <div id="accordion">
   <div class="card">
@@ -363,7 +363,7 @@
         <div class="col-lg-9">
 
 			<div class="row mb-sm-2">
-				
+
 				<div class="col">
 					<form class="form-inline float-left">
 						<div class="form-group">
@@ -376,16 +376,16 @@
 								<option value="rating">User Ratings: High to Low</option>
 							</select>
 						</div>
-					</form>					
+					</form>
 				</div>
-				
+
 				<div class="col">
 					<!-- Button trigger modal -->
 					<button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#exampleModalCenter">
 					  Launch Pantry Manager
 					</button>
 
-                    <!-- Modal -->
+					<!-- Modal -->
                     <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                             <div class="modal-content">
@@ -445,13 +445,14 @@
                         </div>
                     </div>
 				</div>
-				
+
 			</div>
-		
+
+
 		<!-- the place holder for the search result -->
 		<div class="row" id="search_result"></div>
-        
-			
+
+
 			<nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center">
                 <li class="page-item disabled">
@@ -465,7 +466,7 @@
                 </li>
               </ul>
             </nav>
-			
+
         </div>
         <!-- /.col-lg-9 -->
 
@@ -493,76 +494,82 @@
     <!-- Added by Nobu May 20, 2018 : START -->
     <span></span>
     <script language="javascript">
+
         var arraySortedByTime = [
-            ['#4', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
-            ['#6', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
-            ['#12', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
-            ['#11', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
-            ['#7', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0],
+            ['dishes/Dish9Search.html', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
+            ['dishes/Dish5Search.html', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
+            ['dishes/Dish13Search.html', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
+            ['dishes/Dish10Search.html', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
+            ['dishes/Dish7Search.html', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0],
             ['dishes/Dish2Search.html', 'images/dish_00002.jpg', 'XBurger One X 360', 3.12, 570, 30, '&#9733; &#9733; &#9733; &#9733; &#9733;', 43.0, 5.0],
-            ['#5', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
-            ['#10', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
-            ['#8', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0],
-            ['#9', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0],
+            ['dishes/Dish12Search.html', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
+            ['dishes/Dish6Search.html', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
+            ['dishes/Dish11Search.html', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0],
+            ['dishes/Dish8Search.html', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0],
             ['dishes/Dish4Search.html', 'images/dish_00004.jpg', 'Roast beef and Yorkshire puddings', 7.78, 867, 60, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
             ['dishes/Dish3Search.html', 'images/dish_00003.jpg', 'Old-Fashioned Beef Stew', 4.17, 750, 90, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0]
         ]
+
         var arraySortedByCost = [
             ['dishes/Dish2Search.html', 'images/dish_00002.jpg', 'XBurger One X 360', 3.12, 570, 30, '&#9733; &#9733; &#9733; &#9733; &#9733;', 43.0, 5.0],
-            ['#6', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
+            ['dishes/Dish5Search.html', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
             ['dishes/Dish3Search.html', 'images/dish_00003.jpg', 'Old-Fashioned Beef Stew', 4.17, 750, 90, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
-            ['#4', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
-            ['#7', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0],
-            ['#12', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
-            ['#10', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
-            ['#5', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
-            ['#8', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0],
-            ['#11', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
-            ['#9', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0],
+            ['dishes/Dish9Search.html', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
+            ['dishes/Dish7Search.html', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0],
+            ['dishes/Dish13Search.html', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
+            ['dishes/Dish6Search.html', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
+            ['dishes/Dish12Search.html', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
+            ['dishes/Dish11Search.html', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0],
+            ['dishes/Dish10Search.html', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
+            ['dishes/Dish8Search.html', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0],
             ['dishes/Dish4Search.html', 'images/dish_00004.jpg', 'Roast beef and Yorkshire puddings', 7.78, 867, 60, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0]
         ]
+
         var arraySortedByCalorie = [
             ['dishes/Dish4Search.html', 'images/dish_00004.jpg', 'Roast beef and Yorkshire puddings', 7.78, 867, 60, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
             ['dishes/Dish3Search.html', 'images/dish_00003.jpg', 'Old-Fashioned Beef Stew', 4.17, 750, 90, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
-            ['#9', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0],
-            ['#5', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
+            ['dishes/Dish8Search.html', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0],
+            ['dishes/Dish12Search.html', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
             ['dishes/Dish2Search.html', 'images/dish_00002.jpg', 'XBurger One X 360', 3.12, 570, 30, '&#9733; &#9733; &#9733; &#9733; &#9733;', 43.0, 5.0],
-            ['#8', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0],
-            ['#11', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
-            ['#10', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
-            ['#4', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
-            ['#6', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
-            ['#12', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
-            ['#7', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0]
+            ['dishes/Dish11Search.html', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0],
+            ['dishes/Dish10Search.html', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
+            ['dishes/Dish6Search.html', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
+            ['dishes/Dish9Search.html', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
+            ['dishes/Dish5Search.html', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
+            ['dishes/Dish13Search.html', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
+            ['dishes/Dish7Search.html', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0]
         ]
+
         var arraySortedByPopularity = [
-            ['#4', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
+            ['dishes/Dish9Search.html', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
             ['dishes/Dish3Search.html', 'images/dish_00003.jpg', 'Old-Fashioned Beef Stew', 4.17, 750, 90, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
             ['dishes/Dish4Search.html', 'images/dish_00004.jpg', 'Roast beef and Yorkshire puddings', 7.78, 867, 60, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
-            ['#6', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
-            ['#7', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0],
-            ['#10', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
-            ['#11', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
+            ['dishes/Dish5Search.html', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
+            ['dishes/Dish7Search.html', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0],
+            ['dishes/Dish6Search.html', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
+            ['dishes/Dish10Search.html', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
             ['dishes/Dish2Search.html', 'images/dish_00002.jpg', 'XBurger One X 360', 3.12, 570, 30, '&#9733; &#9733; &#9733; &#9733; &#9733;', 43.0, 5.0],
-            ['#5', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
-            ['#9', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0],
-            ['#12', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
-            ['#8', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0]
+            ['dishes/Dish12Search.html', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
+            ['dishes/Dish8Search.html', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0],
+            ['dishes/Dish13Search.html', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
+            ['dishes/Dish11Search.html', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0]
         ]
+
         var arraySortedByRating = [
             ['dishes/Dish2Search.html', 'images/dish_00002.jpg', 'XBurger One X 360', 3.12, 570, 30, '&#9733; &#9733; &#9733; &#9733; &#9733;', 43.0, 5.0],
             ['dishes/Dish4Search.html', 'images/dish_00004.jpg', 'Roast beef and Yorkshire puddings', 7.78, 867, 60, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
             ['dishes/Dish3Search.html', 'images/dish_00003.jpg', 'Old-Fashioned Beef Stew', 4.17, 750, 90, '&#9733; &#9733; &#9733; &#9733; &#9733;', 87.0, 5.0],
-            ['#6', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
-            ['#4', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
-            ['#7', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0],
-            ['#10', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
-            ['#5', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
-            ['#11', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
-            ['#12', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
-            ['#8', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0],
-            ['#9', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0]
+            ['dishes/Dish5Search.html', 'images/dish_00005.jpg', 'Sunny Breakfast Delight', 3.78, 389, 21, '&#9733; &#9733; &#9733; &#9733; &#9734;', 76.0, 4.0],
+            ['dishes/Dish9Search.html', 'images/dish_00009.jpg', 'Fruit Bowl', 4.22, 450, 15, '&#9733; &#9733; &#9733; &#9733; &#9734;', 98.0, 4.0],
+            ['dishes/Dish7Search.html', 'images/dish_00007.jpg', 'Tofu Soup', 4.22, 357, 30, '&#9733; &#9733; &#9733; &#9733; &#9734;', 67.0, 4.0],
+            ['dishes/Dish6Search.html', 'images/dish_00006.jpg', 'Veggie Burrito', 4.76, 478, 35, '&#9733; &#9733; &#9733; &#9733; &#9734;', 56.0, 4.0],
+            ['dishes/Dish12Search.html', 'images/dish_00012.jpg', 'Fish n Fries', 5.27, 576, 32, '&#9733; &#9733; &#9733; &#9733; &#9734;', 34.0, 4.0],
+            ['dishes/Dish10Search.html', 'images/dish_00010.jpg', 'Bacon Sandwich', 5.66, 498, 27, '&#9733; &#9733; &#9733; &#9733; &#9734;', 45.0, 4.0],
+            ['dishes/Dish13Search.html', 'images/dish_00013.jpg', 'Vegetarian Meal', 4.54, 378, 22, '&#9733; &#9733; &#9733; &#9734; &#9734;', 29.0, 3.0],
+            ['dishes/Dish11Search.html', 'images/dish_00011.jpg', 'Grilled Cheese Sandwich', 5.61, 523, 36, '&#9733; &#9733; &#9733; &#9734; &#9734;', 12.0, 3.0],
+            ['dishes/Dish8Search.html', 'images/dish_00008.jpg', 'Fresh Tacos', 6.77, 587, 40, '&#9733; &#9733; &#9733; &#9734; &#9734;', 34.0, 3.0]
         ]
+
         // search dishes and generate HTML code
         function loadSearchResult(arrayDishes){
             var html = ''

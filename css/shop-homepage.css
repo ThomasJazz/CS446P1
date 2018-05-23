@@ -161,12 +161,5 @@ body {
 .col-md-5 {
     text-align: center;
 }
-/* END OF CSS FOR DISH PAGES */
 
-/* CSS for pantry manager modal */
-#lastPerformed {
-    margin: 0 auto;
-    opacity: .5;
-    line-height: 20px;
-}
-/* end of CSS for pantry manager modal */
+/* END OF CSS FOR DISH PAGES */
